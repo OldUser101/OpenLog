@@ -7,10 +7,6 @@
 #include <string.h>
 #include <stdlib.h>
 
-#define STATUS_INFO 1
-#define STATUS_WARNING 2
-#define STATUS_ERROR 3
-
 // Define color macros for Windows systems
 #if defined(_WIN32) || defined(_WIN64)
 

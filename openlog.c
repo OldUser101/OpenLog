@@ -1,6 +1,8 @@
 #include <stdio.h>
 
+#include "openlog.h"
 #include "color.h"
+#include "help.h"
 
 #define _VERSION "v0.1"
 

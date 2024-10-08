@@ -3,6 +3,7 @@
 #include <string.h>
 #include <stdlib.h>
 
+#include "openlog.h"
 #include "color.h"
 
 // Define color macros for Windows systems
