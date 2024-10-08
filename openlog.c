@@ -6,6 +6,7 @@
 
 #define _VERSION "v0.1"
 
+// Display usage information
 void usage()
 {
 	printfc(COLOR_LYELLOW, "OpenLog");
@@ -23,6 +24,7 @@ void usage()
 	printfc(COLOR_LAQUA, "See 'openlog help openlog' for more information.\n");
 }
 
+// Main application entry point
 int main(int argc, char* argv[])
 {
 	if (argc < 2)
