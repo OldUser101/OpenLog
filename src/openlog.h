@@ -15,3 +15,4 @@
 #define COMMAND_INIT 3
 #define COMMAND_STOP 4
 #define COMMAND_START 5
+#define COMMAND_LICENSE 6

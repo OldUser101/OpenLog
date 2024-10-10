@@ -13,4 +13,6 @@ move color.obj ..\build\ > NUL
 move help.obj ..\build\ > NUL
 move util.obj ..\build\ > NUL
 cd ..
+copy LICENSE build\ > NUL
+copy README.md build\ > NUL
 echo Done.

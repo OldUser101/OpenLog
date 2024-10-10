@@ -2,8 +2,9 @@
 #define _OLOG_HELP
 #endif
 
+void banner();
 void usage();
-void showOpenLogInfo();
+void showLicense();
 void showStartInfo();
 void showStopInfo();
 void showInitInfo();
