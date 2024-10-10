@@ -3,6 +3,7 @@
 #include "openlog.h"
 #include "color.h"
 #include "help.h"
+#include "util.h"
 
 #define _VERSION "v0.1"
 
@@ -22,16 +23,6 @@ void usage()
 	printf("	help	Displays help on a given command\n");
 	printfc(COLOR_LAQUA, "See 'openlog help <command>' for help on a specific command.\n");
 	printfc(COLOR_LAQUA, "See 'openlog help openlog' for more information.\n");
-}
-
-// Converts a string to uppercase
-void strupper(char* str)
-{
-	while (*str)
-	{
-		*str = toupper(*str);
-		str++;
-	}
 }
 
 // Returns an integer identifying the supplied command. openlog.h for definitions.

@@ -10,5 +10,5 @@ void help(int item)
 
 void showHelp(int argc, char* argv[])
 {
-	
+	char* command;
 }
