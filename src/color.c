@@ -111,8 +111,8 @@ void printStatus(const char* msg, int code)
 			break;
 	}
 
-	// Print the message like "[TEXT] :: MESSAGE"
-	printf("	[");
+	// Print the message like "[TEXT]: MESSAGE"
+	printf("[");
 	putstr(errStr, textCol);
-	printf("] :: %s\n", msg);       
+	printf("]: %s\n", msg);       
 }

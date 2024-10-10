@@ -59,12 +59,26 @@ int getCommand(int argc, char* argv[])
 // Main application entry point
 int main(int argc, char* argv[])
 {
+	int command;
+	char dispStr[256];
+	
 	if (argc < 2)
 	{
 		usage();
 		return 0;
 	}
-	// Show the command (TESTING)
-	printf("Command: %i\n", getCommand(argc, argv));
+	
+	command = getCommand(argc, argv);
+	
+	switch (command)
+	{
+		case COMMAND_NONE:
+			sprintf(dispStr, "\'%s\' is not a valid command. See \'openlog help\' a list of valid commands.", argv[1]);
+			printStatus(dispStr, STATUS_ERROR);
+			return 1;
+		case COMMAND_HELP:
+			showHelp(argc, argv);
+			return 0;
+	}
 	return 0;
 }

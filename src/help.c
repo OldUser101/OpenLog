@@ -7,3 +7,8 @@ void help(int item)
 {
 	return;
 }
+
+void showHelp(int argc, char* argv[])
+{
+	
+}
