@@ -5,26 +5,6 @@
 #include "help.h"
 #include "util.h"
 
-#define _VERSION "v0.1"
-
-// Display usage information
-void usage()
-{
-	printfc(COLOR_LYELLOW, "OpenLog");
-	printf(" - A cross-platform universal logging library\n");
-	printf("Copyright (C) 2024 Nathan Gill - Version %s\n", _VERSION);
-	printfc(COLOR_LGREEN, "Usage");
-	printf(": openlog <command> [options] ...\n");
-	printf("Commands:\n");
-	printf("	start	Starts the main logging process\n");
-	printf("	stop	Stops the main logging process\n");
-	printf("	init	Creates a new log for a process\n");
-	printf("	raise	Raises an event in the log\n");
-	printf("	help	Displays help on a given command\n");
-	printfc(COLOR_LAQUA, "See 'openlog help <command>' for help on a specific command.\n");
-	printfc(COLOR_LAQUA, "See 'openlog help openlog' for more information.\n");
-}
-
 // Returns an integer identifying the supplied command. openlog.h for definitions.
 int getCommand(int argc, char* argv[])
 {
@@ -64,8 +44,9 @@ int main(int argc, char* argv[])
 	switch (command)
 	{
 		case COMMAND_NONE:
-			sprintf(dispStr, "\'%s\' is not a valid command. See \'openlog help\' a list of valid commands.", argv[1]);
+			sprintf(dispStr, "\'%s\' is not a valid command.", argv[1]);
 			printStatus(dispStr, STATUS_ERROR);
+			printfc(COLOR_LAQUA, "See \'openlog help\' for a list of valid commands.\n");
 			return 1;
 		case COMMAND_HELP:
 			showHelp(argc, argv);

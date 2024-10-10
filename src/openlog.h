@@ -2,6 +2,8 @@
 #define _OLOG_OLOG
 #endif
 
+#define _VERSION "v0.1"
+
 #define STATUS_INFO 1
 #define STATUS_WARNING 2
 #define STATUS_ERROR 3
