@@ -69,7 +69,10 @@ void showStopInfo()
 
 void showInitInfo()
 {
-	
+	banner();
+	printfc(COLOR_LGREEN, "Usage");
+	printf(": openlog init <log name>\n");
+	printf("Initialises a new log file at LOGNAMEXXXX.OLG\n");
 }
 
 void showRaiseInfo()
